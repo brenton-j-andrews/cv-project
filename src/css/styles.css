@@ -1,0 +1,78 @@
+/* Header Styling */
+
+.header-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: red;
+
+    margin: 0px;
+}
+
+.header {
+    color: green;
+}
+
+/* General Resume Styling */
+.resume {
+    background-color: lightgray;
+    margin: 20px;
+    padding: 20px;
+
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+
+/* Title Section Styling */
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+#full-name {
+    margin: 0px;
+    font-size: 48px;
+}
+
+#upper-title {
+    margin: 0px;
+    font-size: 24px;
+}
+
+.edit-btn {
+    display: none;
+    width: 100px;
+    height: 30px;
+}
+
+.title-wrapper:hover .edit-btn{
+    display: block;
+    position: absolute;
+    right: 30px;
+}
+
+/* Edit form styling */
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 30px;
+    z-index: 1;
+
+    background-color: red;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 20px;
+}
+
+.edit-form input, textarea {
+    margin: 10px 5px 10px 5px;
+    padding: 5px;
+    font-size: large;
+    border-radius: 5px;
+}
+
+.edit-form button {
+    margin: 10px 0px 10px 5px;
+    width: 100px;
+}
