@@ -7,8 +7,8 @@ class Title extends React.Component {
         super();
 
         this.state = {
-            fullName: "",
-            title: "",
+            fullName: "Brenton Andrews",
+            title: "Junior Front End Developer",
             profile: "",
             editMode: false
         }

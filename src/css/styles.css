@@ -39,19 +39,57 @@
     font-size: 24px;
 }
 
+.title-wrapper:hover {
+    background-color: darkgray;
+}
+
+.title-wrapper:hover .edit-btn{
+    display: block;
+    position: absolute;
+    right: 50px;
+}
+
+/* Lower Resume General styling */
+.lower-resume-wrapper {
+    display: flex;
+}
+
+.lower-resume-left {
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+}
+
+/* Contact Section styling */
+.left-unit-wrapper {
+    padding-right: 20px;
+    background-color: darkgray;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.left-unit-wrapper p {
+    margin: 10px 0px 5px 0px;
+}
+
+.left-unit-wrapper:hover .edit-btn{
+    display: block;
+}
+
+#contact_info {
+    font-size: large;
+    text-decoration: underline;
+}
+
+
+
+/* Edit button / form styling */
 .edit-btn {
     display: none;
     width: 100px;
     height: 30px;
 }
 
-.title-wrapper:hover .edit-btn{
-    display: block;
-    position: absolute;
-    right: 30px;
-}
-
-/* Edit form styling */
 .edit-form {
     display: flex;
     flex-direction: column;
