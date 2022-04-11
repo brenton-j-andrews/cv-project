@@ -73,7 +73,7 @@ class Skills extends React.Component {
                 > Add </button>
 
                 <button className="edit-btn" onClick={this.toggleDelete}
-                > {this.state.deleteMode ? "Done"  : "Delete" } </button>
+                > { this.state.deleteMode ? "Done"  : "Delete" } </button>
 
 
 

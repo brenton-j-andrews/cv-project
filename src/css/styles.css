@@ -60,7 +60,14 @@
     background-color: lightgray;
 }
 
-/* Contact Section styling */
+.lower-resume-right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Contact / Skills / Interests Section styling */
 .left-unit-wrapper {
     padding-right: 20px;
     background-color: darkgray;
@@ -81,6 +88,14 @@
     text-decoration: underline;
 }
 
+/* Lower resume right styling */
+.education-wrapper {
+    width: auto;
+}
+
+.education-wrapper:hover .edit-btn {
+    display: block;
+}
 
 
 /* Edit button / form styling */

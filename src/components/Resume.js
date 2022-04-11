@@ -3,6 +3,8 @@ import React from "react";
 import Title from "./Title";
 import Contact from "./Contact";
 import Skills from "./Skills";
+import Interests from "./Interests";
+import Education from "./Education";
 
 class Resume extends React.Component {
     render() {
@@ -13,6 +15,10 @@ class Resume extends React.Component {
                     <div className="lower-resume-left">
                         <Contact />
                         <Skills />
+                        <Interests />
+                    </div>
+                    <div className="lower-resume-right">
+                        <Education />
                     </div>
                 </div>
             </div>
