@@ -1,6 +1,6 @@
 A resume generator completed with React. 
 
-[Working demo: ] (https://brenton-j-andrews.github.io/cv-project/)
+Working demo: (https://brenton-j-andrews.github.io/cv-project/)
 
 This was my first project using React and there are many areas that can be improved upon. I am a bit tired of working on this one now, and will implement the changes below sometime soon.
 
