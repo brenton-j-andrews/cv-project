@@ -39,10 +39,6 @@
     font-size: 24px;
 }
 
-.title-wrapper:hover {
-    border: 3px solid black;
-}
-
 .title-wrapper:hover .edit-btn{
     display: block;
     position: absolute;
@@ -69,9 +65,9 @@
 
 /* Contact / Skills / Interests Section styling */
 .left-unit-wrapper {
-    padding-right: 20px;
+    /* padding-right: 20px; */
     background-color: darkgray;
-    padding: 5px;
+    padding: 10px;
     margin-bottom: 10px;
 }
 
@@ -89,14 +85,43 @@
 }
 
 /* Lower resume right styling */
-.education-wrapper {
-    width: auto;
+.section-header {
+    display: flex;
+    justify-content: space-between;
 }
 
-.education-wrapper:hover .edit-btn {
-    display: block;
+
+.education-wrapper:hover .edit-btn,
+.experience-wrapper:hover .edit-btn {
+    display: inline;
 }
 
+#education-title,
+#experience-title {
+    margin: 0px 0px 5px 10px;
+    font-size: 24px;
+}
+
+/* Education and Experience section styling */
+.edu-unit,
+.exp-unit {
+    display: flex;
+}
+
+.edu-unit p,
+.exp-unit p {
+    margin: 0px 0px 5px 0px;
+}
+
+.edu-unit-left,
+.edu-unit-right,
+.exp-unit-left,
+.exp-unit-right {
+    display: flex;
+    flex-direction: column;
+    margin-right: 15px;
+    padding: 15px;
+}
 
 /* Edit button / form styling */
 .edit-btn {

@@ -7,11 +7,11 @@ class Education extends React.Component {
         this.state = {
             educationArr : [
                 {
-                    degree: "BS in Your Degree Here",
-                    school: "My school",
-                    location: "Sometown, MA",
-                    start_year : "2015",
-                    finish_year : "2019",
+                    degree: "BS in Marine Transportation",
+                    school: "Massachusetts Maritime Academy",
+                    location: "Bourne, MA",
+                    start_year : "2011",
+                    finish_year : "2015",
                 }
             ],
 
@@ -92,19 +92,31 @@ class Education extends React.Component {
         return (
 
             <div className="education-wrapper">
-                <p id="upper-title"> Education </p>
+                <div className="section-header">
+                    <p id="education-title"> Education </p>
+                    <div className="section-header-btns">
+                    <button className="edit-btn" onClick={this.toggleEdit}> Add </button>
+                    <button className="edit-btn" onClick={this.toggleDelete}> { this.state.deleteMode ? "Done"  : "Delete" } </button>
+                    </div>
+                </div>
+                <hr></hr>
+
                 <div className="education-units">
                     {this.state.educationArr.map((eduUnit) => (
-                        <div className="unit" onClick={() => this.removeEducation(eduUnit)}>
-                            <p> {eduUnit.degree} </p>
-                            <p> {eduUnit.school} </p>
-                            <p> {eduUnit.location} </p>
-                            <p> {eduUnit.start_year} - {eduUnit.finish_year}</p>
+                        <div className="edu-unit" onClick={() => this.removeEducation(eduUnit)}>
+                            
+                            <div className="edu-unit-left"> 
+                                <p> {eduUnit.start_year} - {eduUnit.finish_year}</p>
+                                <p> {eduUnit.degree} </p>
+                            </div>
+
+                            <div className="edu-unit-right"> 
+                                <p> {eduUnit.school} </p>
+                                <p> {eduUnit.location} </p>
+                            </div>
                         </div> ))}
                 </div>
-                <button className="edit-btn" onClick={this.toggleEdit}> Add </button>
-                <button className="edit-btn" onClick={this.toggleDelete}> { this.state.deleteMode ? "Done"  : "Delete" } </button>
-
+             
                 {editMode 
                 && <form className="edit-form" onSubmit={this.addEducation}>
                         <label> Add your education: </label>
