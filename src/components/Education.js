@@ -8,8 +8,8 @@ class Education extends React.Component {
             educationArr : [
                 {
                     degree: "BS in Marine Transportation",
-                    school: "Massachusetts Maritime Academy",
-                    location: "Bourne, MA",
+                    school: "My Undergrad University",
+                    location: "Somewhereville, USA",
                     start_year : "2011",
                     finish_year : "2015",
                 }
@@ -118,7 +118,7 @@ class Education extends React.Component {
                 </div>
              
                 {editMode 
-                && <form className="edit-form" onSubmit={this.addEducation}>
+                && <form className="edit-form education" onSubmit={this.addEducation}>
                         <label> Add your education: </label>
                         <input type="text" name="degree" value={this.state.degree} onChange={this.handleChange} placeholder="degree name" required></input>  
                         <input type="text" name="school" value={this.state.school} onChange={this.handleChange} placeholder="school name" required></input>

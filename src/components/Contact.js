@@ -7,13 +7,13 @@ class Contact extends React.Component {
         super();
 
         this.state = {
-            address_1 : "1962 S 1200 E",
-            address_2 : "Apt 504",
-            city_state: "Salt Lake City, UT",
-            phone_number : "978-257-1500",
-            email : "brenton.j.andrews@gmail.com",
+            address_1 : "Address Part 1",
+            address_2 : "Address Part 2",
+            city_state: "Some Town, USA",
+            phone_number : "555-555-5555",
+            email : "myemailaddress@mail.com",
             website : "myCoolWebsite.com",
-            github : "",
+            github : "my GitHub repo",
             editMode: false
         }
 
@@ -45,7 +45,7 @@ class Contact extends React.Component {
              editMode } = this.state;
 
         return (
-            <div className="left-unit-wrapper">
+            <div className="left-unit-wrapper contact">
                 <p id="contact_info"> Contact Information </p>
                 <p id="address_1"> { address_1 ? address_1 : "Address 1"} </p>
                 <p id="address_2"> { address_2 ? address_2 : "Address 2"} </p>
@@ -61,7 +61,7 @@ class Contact extends React.Component {
                 </button>
 
                 { editMode &&
-                    <form className="edit-form"> 
+                    <form className="edit-form contact"> 
                         <input onChange={this.handleChange} name="address_1" type="text" placeholder="Address 1"></input>
                         <input onChange={this.handleChange} name="address_2" type="text" placeholder="Address 2"></input>
                         <input onChange={this.handleChange} name="city_state" type="text" placeholder="city_state"></input>

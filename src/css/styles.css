@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     background-color: red;
-
+    width: 100%;
     margin: 0px;
 }
 
@@ -17,7 +17,7 @@
     background-color: lightgray;
     margin: 20px;
     padding: 20px;
-
+    width: 1000px;
     border: 3px solid black;
     border-radius: 20px;
 }
@@ -27,6 +27,7 @@
 .title-wrapper {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #full-name {
@@ -65,10 +66,10 @@
 
 /* Contact / Skills / Interests Section styling */
 .left-unit-wrapper {
-    /* padding-right: 20px; */
     background-color: darkgray;
     padding: 10px;
     margin-bottom: 10px;
+    width: 250px;
 }
 
 .left-unit-wrapper p {
@@ -90,6 +91,10 @@
     justify-content: space-between;
 }
 
+.experience-wrapper,
+.education-wrapper {
+    position: relative;
+}
 
 .education-wrapper:hover .edit-btn,
 .experience-wrapper:hover .edit-btn {
@@ -103,14 +108,29 @@
 }
 
 /* Education and Experience section styling */
-.edu-unit,
 .exp-unit {
     display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.edu-unit {
+    display: flex;
+}
+
+.exp-unit-top {
+    display: flex;
+    font-size: 18px;
+    font-weight: 800;
 }
 
 .edu-unit p,
 .exp-unit p {
     margin: 0px 0px 5px 0px;
+}
+
+.exp-description {
+    margin: 0px 0px 0px 10px;
 }
 
 .edu-unit-left,
@@ -134,13 +154,30 @@
     display: flex;
     flex-direction: column;
     position: fixed;
-    right: 30px;
     z-index: 1;
 
     background-color: red;
     padding: 10px;
     border: 3px solid black;
     border-radius: 20px;
+}
+
+.edit-form, fullname {
+    position: absolute;
+    
+}
+.edit-form, experience {
+    position: absolute;
+    top: 40px;
+    right: 0px;
+}
+
+.edit-form, education {
+    position: absolute;
+}
+
+.edit-form, contact {
+    position: absolute;
 }
 
 .edit-form input, textarea {

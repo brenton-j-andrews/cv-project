@@ -46,7 +46,7 @@ class Title extends React.Component {
                 </button>
 
                 { editMode &&
-                    <form className="edit-form"> 
+                    <form className="edit-form fullname"> 
                         <input onChange={this.handleChange} name="fullName" type="text" placeholder="Enter your name"></input>
                         <input onChange={this.handleChange} name="title" type="text" placeholder="Enter your title"></input>
                         <textarea onChange={this.handleChange} name="profile" type="text" placeholder="Enter your profile"></textarea>

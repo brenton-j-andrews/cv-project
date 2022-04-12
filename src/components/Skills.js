@@ -78,7 +78,7 @@ class Skills extends React.Component {
 
 
                 {editMode && 
-                    <form className="edit-form" onSubmit={this.addSkill}>
+                    <form className="edit-form skills" onSubmit={this.addSkill}>
                         <label> Add a skill </label>
                         <input type="text" name="newSkill" value={this.state.newSkill} onChange={this.handleChange} placeholder="new skill" required></input>    
                         <input type="submit" value="Add"/>

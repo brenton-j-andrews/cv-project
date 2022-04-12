@@ -7,11 +7,22 @@ class Experience extends React.Component {
         this.state = {
             experienceArr : [
                 {
-                    company: "US Navy - Military  Sealift Command",
+                    company: "A Different Job in a Different Career",
                     city: "Norfolk, VA",
-                    role: "3rd Mate",
+                    role: "Collect paycheck",
                     start_date : "July 2015",
                     finish_date : "July 2020",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo."
+                },
+
+                {
+                    company: "A Cool Software Company",
+                    city: "Salt Lake City, UT",
+                    role: "Junior Web Developer",
+                    start_date: "July 2022",
+                    finish_date: "Present",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempoLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempo."
+
                 }
             ],
 
@@ -20,6 +31,7 @@ class Experience extends React.Component {
             role: "",
             start_date : "",
             finish_date : "",
+            description: "",
             
             editMode: false,
             deleteMode: false,
@@ -61,7 +73,8 @@ class Experience extends React.Component {
             city : this.state.city,
             role : this.state.role,
             start_date : this.state.start_date,
-            finish_date : this.state.finish_date
+            finish_date : this.state.finish_date,
+            description : this.state.description
         }
 
         const newArr = this.state.experienceArr;
@@ -73,7 +86,8 @@ class Experience extends React.Component {
             city : "",
             role : "",
             start_date : "",
-            finish_date : ""
+            finish_date : "",
+            description : ""
         })
     }
 
@@ -105,28 +119,34 @@ class Experience extends React.Component {
                 <div className="experience-units">
                     {this.state.experienceArr.map((expUnit) => (
                         <div className="exp-unit" onClick={() => this.removeExperience(expUnit)}>
+                            <div className="exp-unit-top">
+                                <div className="exp-unit-left"> 
+                                    <p> {expUnit.start_date} - {expUnit.finish_date}</p>
+                                    <p> {expUnit.role} </p>
+                                </div>
 
-                            <div className="exp-unit-left"> 
-                                <p> {expUnit.start_date} - {expUnit.finish_date}</p>
-                                <p> {expUnit.role} </p>
+                                <div className="exp-unit-right"> 
+                                    <p> {expUnit.company} </p>
+                                    <p> {expUnit.city} </p>
+                                </div>
                             </div>
 
-                            <div className="exp-unit-right"> 
-                                <p> {expUnit.company} </p>
-                                <p> {expUnit.city} </p>
+                            <div className="exp-description">
+                                <p> { expUnit.description }</p>
                             </div>
                         </div> ))}
                 </div>
               
 
                 {editMode 
-                && <form className="edit-form" onSubmit={this.addExperience}>
+                && <form className="edit-form experience" onSubmit={this.addExperience}>
                         <label> Add your work experience: </label>
-                        <input type="text" name="company" value={this.state.company} onChange={this.handleChange} placeholder="company name" required></input>  
-                        <input type="text" name="city" value={this.state.city} onChange={this.handleChange} placeholder="location" required></input>
-                        <input type="text" name="role" value={this.state.role} onChange={this.handleChange} placeholder="role" required></input>
-                        <input type="text" name="start_date" value={this.state.start_date} onChange={this.handleChange} placeholder="start date" required></input>
-                        <input type="text" name="finish_date" value={this.state.finish_date} onChange={this.handleChange} placeholder="finish date" required></input>
+                        <input type="text" name="company" value={this.state.company} onChange={this.handleChange} placeholder="company name"></input>  
+                        <input type="text" name="city" value={this.state.city} onChange={this.handleChange} placeholder="location" ></input>
+                        <input type="text" name="role" value={this.state.role} onChange={this.handleChange} placeholder="role" ></input>
+                        <input type="text" name="start_date" value={this.state.start_date} onChange={this.handleChange} placeholder="start date" ></input>
+                        <input type="text" name="finish_date" value={this.state.finish_date} onChange={this.handleChange} placeholder="finish date" ></input>
+                        <textarea type="textarea" name="description" value={this.state.description} onChange={this.handleChange} placeholder="describe your job"></textarea>
                         <input type="submit" value="Add"/>
                     </form>}
             </div>        
