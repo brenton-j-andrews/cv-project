@@ -15,6 +15,7 @@ A simple resume generator that was my first project using React. This project se
 To close a form, re-press the 'add' button that you opened the form with. I should have made that clearer. 
 
 It appears that I was optimistic with the idea of having a job by July, hopefully only off by a couple months!
+
 ---
 
 ### Frameworks
